@@ -1,0 +1,137 @@
+/* Enhanced Form Styling with Glassmorphism */
+form {
+    margin: 50px auto;
+    max-width: 600px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.75); /* Slight transparency for glass effect */
+    border-radius: 20px; /* Softer, more rounded corners */
+    backdrop-filter: blur(10px); /* Glass effect */
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-image: linear-gradient(45deg, #007BFF, #ff6bcb) 1; /* Gradient border */
+}
+
+form:hover {
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.25); /* Increase shadow on hover */
+    transform: scale(1.02); /* Slight zoom on hover */
+}
+
+form h2 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #007BFF;
+    letter-spacing: 1.5px;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    position: relative;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+    position: absolute;
+    top: -12px;
+    left: 15px;
+    background-color: rgba(255, 255, 255, 0.8); /* Background to make it readable on any form background */
+    padding: 0 8px;
+    transition: all 0.3s ease;
+    pointer-events: none; /* Disable interaction with the label */
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="date"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 15px 18px;
+    margin-bottom: 30px;
+    border: 2px solid #ccc;
+    border-radius: 10px; /* Softer corners for inputs */
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.85); /* Slight transparency */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.4); /* Soft blue glow on focus */
+    background-color: rgba(250, 250, 250, 0.9);
+}
+
+form textarea {
+    height: 160px;
+    resize: vertical;
+}
+
+form button[type="submit"] {
+    padding: 15px 45px;
+    background: linear-gradient(45deg, #007BFF, #ff6bcb); /* Gradient background for button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+form button[type="submit"]:hover {
+    background: linear-gradient(45deg, #0056b3, #ff3a8e);
+    transform: translateY(-3px); /* Subtle lift effect on hover */
+}
+
+form button[type="submit"]:active {
+    background-color: #004494;
+    transform: translateY(0);
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.2); /* Decrease shadow on click */
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Animation for form appearance */
+@keyframes slideIn {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+form {
+    animation: slideIn 0.6s ease-out;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    form {
+        padding: 25px;
+        max-width: 95%;
+    }
+    
+    form h2 {
+        font-size: 24px;
+    }
+
+    form button[type="submit"] {
+        font-size: 16px;
+        padding: 12px 30px;
+    }
+}

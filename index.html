@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRMCEAM</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url('PEMCEAM2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Navigation Bar */
+        header {
+            background-color: rgba(0, 77, 153, 0.9);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ffcc29;
+            color: #004d99;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 80vh;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            flex-direction: column;
+            padding: 0 2rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            background-color: #004d99;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #ffcc29;
+            color: #004d99;
+            transform: translateY(-5px);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: rgba(0, 77, 153, 0.9);
+            color: white;
+            font-size: 1rem;
+            margin-top: auto;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <a href="student.php">Student Module</a>
+            <a href="staff.php">Staff Module</a>
+            <a href="department.php">Department Module</a>
+            <a href="exam_timetable.php">Exam Timetable</a>
+            <a href="student_exam_timetable.php">View Exam Timetable</a>
+            <a href="student_departments.php">View Departments</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to PRMCEAM</h1>
+        <h3>Vision</h3>
+        <p>To become a center of excellence in engineering education, by providing the standard academics that connects knowledge, practice and research.</p>
+        <!-- Update the button href to the desired URL -->
+       
+        <a href="https://prmceam.ac.in/" class="btn">Explore Now</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 PRMCEAM College. All rights reserved.
+    </footer>
+</body>
+</html>
